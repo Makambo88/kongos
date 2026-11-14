@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=KongOS
+Description=KongOS Boot Splash
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/kongos
+ScriptFile=/usr/share/plymouth/themes/kongos/kongos.script
