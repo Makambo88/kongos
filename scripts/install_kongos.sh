@@ -37,7 +37,15 @@ fi
 if [ -f "/tmp/kongos-assets/scripts/set_sddm.sh" ]; then
     bash /tmp/kongos-assets/scripts/set_sddm.sh
 fi
+# 6. Installer les icônes KongOS
+if [ -f "/tmp/kongos-assets/scripts/set_icons.sh" ]; then
+    bash /tmp/kongos-assets/scripts/set_icons.sh
+fi
 
+# 7. Appliquer le thème KDE
+if [ -f "/tmp/kongos-assets/scripts/set_kde_theme.sh" ]; then
+    bash /tmp/kongos-assets/scripts/set_kde_theme.sh
+fi
 echo "=========================================="
 echo "   INSTALLATION DE KONGOS TERMINÉE !"
 echo "=========================================="
