@@ -1,0 +1,9 @@
+# KongOS Plymouth Script
+background_image = Image("boot-background.png");
+screen_width = Window.GetWidth();
+screen_height = Window.GetHeight();
+resized_image = background_image.Scale(screen_width, screen_height);
+background_sprite = Sprite(resized_image);
+background_sprite.SetZ(-100); # Met l'image tout au fond
+
+# Le reste des éléments (texte, chargement) peuvent être ajoutés ici plus tard
