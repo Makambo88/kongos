@@ -23,29 +23,31 @@ if [ -f "/tmp/kongos-assets/scripts/enable_password_feedback.sh" ]; then
     bash /tmp/kongos-assets/scripts/enable_password_feedback.sh
 fi
 
-# 3. Installer l'icône principale (le logo "K")
-if [ -f "/tmp/kongos-assets/scripts/set_logo.sh" ]; then
-    bash /tmp/kongos-assets/scripts/set_logo.sh
-fi
-
-# 4. Appliquer l'écran de démarrage (Plymouth - l'image de l'horizon)
+# 3. Appliquer l'écran de démarrage (Plymouth - l'image de l'horizon)
 if [ -f "/tmp/kongos-assets/scripts/set_plymouth.sh" ]; then
     bash /tmp/kongos-assets/scripts/set_plymouth.sh
 fi
 
-# 5. Appliquer l'écran de connexion (SDDM - l'image de la Terre avec les champs)
+# 4. Appliquer l'écran de connexion (SDDM - l'image de la Terre)
 if [ -f "/tmp/kongos-assets/scripts/set_sddm.sh" ]; then
     bash /tmp/kongos-assets/scripts/set_sddm.sh
 fi
-# 6. Installer les icônes KongOS
+
+# 5. Installer les icônes KongOS
 if [ -f "/tmp/kongos-assets/scripts/set_icons.sh" ]; then
     bash /tmp/kongos-assets/scripts/set_icons.sh
 fi
 
-# 7. Appliquer le thème KDE
+# 6. Appliquer le thème de couleurs KDE
 if [ -f "/tmp/kongos-assets/scripts/set_kde_theme.sh" ]; then
     bash /tmp/kongos-assets/scripts/set_kde_theme.sh
 fi
+
+# 7. Appliquer les effets visuels (Flou, transparence)
+if [ -f "/tmp/kongos-assets/scripts/set_kde_effects.sh" ]; then
+    bash /tmp/kongos-assets/scripts/set_kde_effects.sh
+fi
+
 echo "=========================================="
 echo "   INSTALLATION DE KONGOS TERMINÉE !"
 echo "=========================================="
