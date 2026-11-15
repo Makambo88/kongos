@@ -48,6 +48,16 @@ if [ -f "/tmp/kongos-assets/scripts/set_kde_effects.sh" ]; then
     bash /tmp/kongos-assets/scripts/set_kde_effects.sh
 fi
 
+# 8. Installer le thème de fenêtre (Aurorae - Bordures et boutons)
+if [ -f "/tmp/kongos-assets/scripts/set_window_theme.sh" ]; then
+    bash /tmp/kongos-assets/scripts/set_window_theme.sh
+fi
+
+# 9. Supprimer les traces visibles d'Ubuntu (Optionnel, si tu as créé le script)
+if [ -f "/tmp/kongos-assets/scripts/remove_ubuntu_branding.sh" ]; then
+    bash /tmp/kongos-assets/scripts/remove_ubuntu_branding.sh
+fi
+
 echo "=========================================="
 echo "   INSTALLATION DE KONGOS TERMINÉE !"
 echo "=========================================="
