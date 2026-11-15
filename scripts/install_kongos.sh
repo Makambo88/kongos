@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script principal d'installation de KongOS
-# À exécuter dans Cubic (environnement Kubuntu)
+# À exécuter dans Cubic (environnement Ubuntu/GNOME)
 
 echo "=========================================="
 echo "   INSTALLATION DE L'IDENTITÉ KONGOS"
@@ -13,7 +13,7 @@ if [ ! -d "/tmp/kongos-assets" ]; then
     exit 1
 fi
 
-# 1. Appliquer le fond d'écran du bureau (l'image de la ville futuriste)
+# 1. Appliquer le fond d'écran du bureau (Version GNOME)
 if [ -f "/tmp/kongos-assets/scripts/set_wallpaper.sh" ]; then
     bash /tmp/kongos-assets/scripts/set_wallpaper.sh
 fi
@@ -28,32 +28,22 @@ if [ -f "/tmp/kongos-assets/scripts/set_plymouth.sh" ]; then
     bash /tmp/kongos-assets/scripts/set_plymouth.sh
 fi
 
-# 4. Appliquer l'écran de connexion (SDDM - l'image de la Terre)
-if [ -f "/tmp/kongos-assets/scripts/set_sddm.sh" ]; then
-    bash /tmp/kongos-assets/scripts/set_sddm.sh
-fi
-
-# 5. Installer les icônes KongOS
+# 4. Installer les icônes KongOS
 if [ -f "/tmp/kongos-assets/scripts/set_icons.sh" ]; then
     bash /tmp/kongos-assets/scripts/set_icons.sh
 fi
 
-# 6. Appliquer le thème de couleurs KDE
-if [ -f "/tmp/kongos-assets/scripts/set_kde_theme.sh" ]; then
-    bash /tmp/kongos-assets/scripts/set_kde_theme.sh
+# 5. Appliquer le thème GNOME (Mode sombre)
+if [ -f "/tmp/kongos-assets/scripts/set_gnome_theme.sh" ]; then
+    bash /tmp/kongos-assets/scripts/set_gnome_theme.sh
 fi
 
-# 7. Appliquer les effets visuels (Flou, transparence)
-if [ -f "/tmp/kongos-assets/scripts/set_kde_effects.sh" ]; then
-    bash /tmp/kongos-assets/scripts/set_kde_effects.sh
+# 6. Appliquer les effets visuels GNOME (Flou, transparence)
+if [ -f "/tmp/kongos-assets/scripts/set_gnome_effects.sh" ]; then
+    bash /tmp/kongos-assets/scripts/set_gnome_effects.sh
 fi
 
-# 8. Installer le thème de fenêtre (Aurorae - Bordures et boutons)
-if [ -f "/tmp/kongos-assets/scripts/set_window_theme.sh" ]; then
-    bash /tmp/kongos-assets/scripts/set_window_theme.sh
-fi
-
-# 9. Supprimer les traces visibles d'Ubuntu (Optionnel, si tu as créé le script)
+# 7. Supprimer les traces visibles d'Ubuntu
 if [ -f "/tmp/kongos-assets/scripts/remove_ubuntu_branding.sh" ]; then
     bash /tmp/kongos-assets/scripts/remove_ubuntu_branding.sh
 fi
