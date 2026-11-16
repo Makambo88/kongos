@@ -43,7 +43,12 @@ if [ -f "/tmp/kongos-assets/scripts/set_gnome_effects.sh" ]; then
     bash /tmp/kongos-assets/scripts/set_gnome_effects.sh
 fi
 
-# 7. Supprimer les traces visibles d'Ubuntu
+# 7. Installer le curseur KongOS
+if [ -f "/tmp/kongos-assets/scripts/set_cursor.sh" ]; then
+    bash /tmp/kongos-assets/scripts/set_cursor.sh
+fi
+
+# 8. Supprimer les traces visibles d'Ubuntu
 if [ -f "/tmp/kongos-assets/scripts/remove_ubuntu_branding.sh" ]; then
     bash /tmp/kongos-assets/scripts/remove_ubuntu_branding.sh
 fi
